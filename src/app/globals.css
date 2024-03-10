@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body{
+    @apply bg-sky-100 
+  }
+}
+
+@layer components{
+  .quote{
+    @apply p-4 bg-blue-300 m-3 rounded-lg
+  }
+
+  .quote p{
+    @apply text-lg leading-snug font-serif italic text-gray-700 mb-1
+  }
+  
+  span{
+    @apply text-sm text-gray-500
+  }
+}
