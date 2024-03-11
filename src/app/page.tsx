@@ -4,16 +4,22 @@ import GridLogos from "./components/gridLogos";
 import GridMenu from "./components/gridMenu";
 import GridSideNav from "./components/gridSideNav";
 import QuoteCards from "./components/quoteCards";
+import PropExample from "./reactCompnents/propExample";
 
 
 export default function Home() {
   return (
     <>
-    <QuoteCards/>
+    {/* Nextjs + Tailwindcss */}
+    {/* <QuoteCards/>
     <GridSideNav/>
     <GridMenu/>
     <GridHeaderFooter/>
-    <GridLogos/>
+    <GridLogos/> */}
+
+
+    {/* Reactjs or Nextjs + Typescript */}
+    <PropExample/>
     </>
   );
 }
