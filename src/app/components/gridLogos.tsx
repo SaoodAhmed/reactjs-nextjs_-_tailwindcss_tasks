@@ -9,7 +9,7 @@ const GridLogos = () => {
       />
 
       <img
-        src="https://res.cloudinary.com/thirus/image/upload/v1634556262/logos/logoipsum-8_euk84k.svg"
+        src="https://res.cloudinary.com/thirus/image/upload/v1634556259/logos/logoipsum-5_wqq52e.svg"
         alt=""
       />
 
@@ -28,19 +28,11 @@ const GridLogos = () => {
       />
 
       <img
-        src="https://res.cloudinary.com/thirus/image/upload/v1634556262/logos/logoipsum-8_euk84k.svg"
+        src="https://res.cloudinary.com/thirus/image/upload/v1634556259/logos/logoipsum-5_wqq52e.svg"
         alt=""
       />
 
-      <img
-        src="https://res.cloudinary.com/thirus/image/upload/v1634556260/logos/logoipsum-1_frjjk6.svg"
-        alt=""
-      />
-
-      <img
-        src="https://res.cloudinary.com/thirus/image/upload/v1634556262/logos/logoipsum-9_hqrvx7.svg"
-        alt=""
-      />
+    
     </div>
   );
 };

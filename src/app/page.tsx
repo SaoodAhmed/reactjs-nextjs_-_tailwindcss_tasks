@@ -5,6 +5,7 @@ import GridMenu from "./components/gridMenu";
 import GridShippingCart from "./components/gridShippingCart";
 import GridSideNav from "./components/gridSideNav";
 import QuoteCards from "./components/quoteCards";
+import AlertButtonUseState from "./reactCompnents/alertButtonUseState";
 import PropExample from "./reactCompnents/propExample";
 
 
@@ -14,12 +15,12 @@ export default function Home() {
     {/* Nextjs + Tailwindcss */}
 
 
-    <QuoteCards/>
+    {/* <QuoteCards/>
     <GridSideNav/>
     <GridMenu/>
     <GridHeaderFooter/>
     <GridLogos/>
-    <GridShippingCart/>
+    <GridShippingCart/> */}
 
 
 
@@ -30,6 +31,8 @@ export default function Home() {
 
 
     {/* <PropExample/> */}
+
+    <AlertButtonUseState/>
     </>
   );
 }
