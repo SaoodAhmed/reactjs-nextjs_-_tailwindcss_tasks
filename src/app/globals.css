@@ -42,5 +42,23 @@
     @apply text-lg font-bold
   }
 
+  .spanUtil{
+    @apply font-bold text-2xl text-cyan-800 mt-5
+
+  }
+
+  .buttonClass{
+    @apply mt-2 bg-cyan-600 text-white py-2 px-4 rounded-md text-sm
+  }
+
+  .anchor{
+    @apply font-bold text-teal-700
+
+  }
+
+  .card{
+    @apply p-8 m-8 bg-white w-80 rounded-md
+  }
+
 
 }

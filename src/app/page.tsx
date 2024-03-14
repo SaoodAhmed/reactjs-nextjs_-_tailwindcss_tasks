@@ -1,4 +1,6 @@
 
+import FlexSelf from "./components/flexSelf";
+import GridCard from "./components/gridCard";
 import GridHeaderFooter from "./components/gridHeaderFooter";
 import GridLogos from "./components/gridLogos";
 import GridMenu from "./components/gridMenu";
@@ -15,12 +17,14 @@ export default function Home() {
     {/* Nextjs + Tailwindcss */}
 
 
-    {/* <QuoteCards/>
+    <QuoteCards/>
     <GridSideNav/>
     <GridMenu/>
     <GridHeaderFooter/>
     <GridLogos/>
-    <GridShippingCart/> */}
+    <GridShippingCart/>
+    <FlexSelf/>
+    <GridCard/>
 
 
 
@@ -32,7 +36,7 @@ export default function Home() {
 
     {/* <PropExample/> */}
 
-    <AlertButtonUseState/>
+    {/* <AlertButtonUseState/> */}
     </>
   );
 }
