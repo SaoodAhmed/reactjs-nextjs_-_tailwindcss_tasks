@@ -6,6 +6,7 @@ import GridHorizentalForm from "./components/gridHorizentalForm";
 import GridLogos from "./components/gridLogos";
 import GridMenu from "./components/gridMenu";
 import GridResponsiveSection from "./components/gridResponsiveSection";
+import GridSectionText from "./components/gridSectionText";
 import GridShippingCart from "./components/gridShippingCart";
 import GridSideNav from "./components/gridSideNav";
 import GridStartEndSpan from "./components/gridStartEnd&Span";
@@ -31,6 +32,7 @@ export default function Home() {
     <GridHorizentalForm/>
     <GridStartEndSpan/>
     <GridResponsiveSection/>
+    <GridSectionText/>
 
 
 

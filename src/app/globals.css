@@ -61,4 +61,27 @@
   }
 
 
+  .section{
+    @apply mx-auto
+  }
+
+  section > div {
+    @apply p-8 rounded-lg;
+  }
+
+  .violet{
+    @apply bg-indigo-600 text-white
+  }
+
+  .gray {
+    @apply bg-gray-600 text-white;
+  }
+  .white, .white-long {
+    @apply bg-white;
+  }
+  .dark {
+    @apply bg-gray-900 text-white;
+  }
+
+
 }
