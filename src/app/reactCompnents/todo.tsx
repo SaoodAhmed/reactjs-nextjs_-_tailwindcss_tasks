@@ -16,6 +16,8 @@ const Todo = () => {
   const [fname, setFirstName] = useState("");
   const [lname, setLastName] = useState("");
   const [age, setAge] = useState("");
+  const [id, setId] = useState(0);
+  const [isUpdate, setUpdate] = useState(false);
   const [data, setData] = useState<EmployeeDataType[]>([]);
 
   useEffect(() => {
@@ -31,9 +33,43 @@ const Todo = () => {
     }
   };
 
+  function handleEdit(id: number) {
+    const dt = data.filter((item: EmployeeDataType) => item.id === id);
+    if (dt) {
+      setUpdate(true);
+      setId(id);
+      setFirstName(dt[0].firstName);
+      setLastName(dt[0].lastName);
+      setAge(dt[0].age);
+    }
+  }
+
+  function handleClear() {
+    setId(0);
+    setFirstName("");
+    setLastName("");
+    setAge("");
+    setUpdate(false)
+  }
+
+  const handleUpdate = ()=>{
+    const index = data.map((item:EmployeeDataType)=>{
+      return item.id
+    }).indexOf(id)
+
+    const dt = [...data]
+    dt[index].firstName = fname;
+    dt[index].lastName = lname;
+    dt[index].age = age
+    setData(dt)
+    handleClear()
+  }
+
+  
+
   return (
     <div className="p-8">
-      <div className="pb-8 flex flex-col gap-y-4">
+      <div className="pb-24 flex flex-col justify-center items-center gap-y-4">
         <label>
           First Name :
           <input
@@ -59,18 +95,41 @@ const Todo = () => {
           />
         </label>
         <div>
+          {!isUpdate ? (
+            <>
+              <button
+                className=" self-start px-6 py-1 bg-slate-800 text-white rounded-md mr-2 mt-2"
+                onClick={() => {
+                  setData([
+                    ...data,
+                    {
+                      id: nextId++,
+                      firstName: fname,
+                      lastName: lname,
+                      age: age,
+                    },
+                  ]);
+                }}
+              >
+                Save
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                className=" self-start px-6 py-1 bg-slate-800 text-white rounded-md mr-2 mt-2"
+                onClick={handleUpdate}
+              >
+                Update
+              </button>
+            </>
+          )}
           <button
-            className=" self-start px-6 py-1 bg-slate-800 text-white rounded-md mr-2 mt-2"
-            onClick={() => {
-              setData([
-                ...data,
-                { id: nextId++, firstName: fname, lastName: lname, age: age },
-              ]);
-            }}
+            onClick={handleClear}
+            className="self-start px-6 py-1 bg-slate-800 text-white rounded-md "
           >
-            Save
+            Clear
           </button>
-          <button className="self-start px-6 py-1 bg-slate-800 text-white rounded-md ">Clear</button>
         </div>
       </div>
       <table className="w-full">
@@ -84,16 +143,19 @@ const Todo = () => {
             <td className="font-bold pb-2">Actions</td>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="">
           {data.map((item: EmployeeDataType, index: number) => (
-            <tr key={index + 1}>
-              <td>{item.id}</td>
+            <tr key={index + 1} className="">
+              <td>{index + 1}</td>
               <td>{item.id}</td>
               <td>{item.firstName}</td>
               <td>{item.lastName}</td>
               <td>{item.age}</td>
               <td>
-                <button className=" mr-2 py-2 w-20 rounded-md bg-blue-600 text-white">
+                <button
+                  onClick={() => handleEdit(item.id)}
+                  className=" mr-2 py-2 w-20 rounded-md bg-blue-600 text-white"
+                >
                   Edit
                 </button>
                 <button
