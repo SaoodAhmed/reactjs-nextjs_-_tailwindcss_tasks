@@ -10,19 +10,13 @@ import React from "react";
 //   );
 // };
 
-
-
-
-interface propsType{
-    type:string;
-    heading:string;
-    children:string;
-
+interface propsType {
+  type: string;
+  heading: string;
+  children: string;
 }
 
-
-
-const Alert = ({type, heading, children}:propsType) => {
+const Alert = ({ type, heading, children }: propsType) => {
   return (
     <>
       <span>{`${type === "warning" ? "⚠" : "i"}`}</span>
@@ -32,17 +26,14 @@ const Alert = ({type, heading, children}:propsType) => {
   );
 };
 
-
-
-
 const PropExample = () => {
   return (
     <div className="p-10">
-        <Alert type="Informaition" heading="Success" >
-            Everything is really good!
-        </Alert>
+      <Alert type="Informaition" heading="Success">
+        Everything is really good!
+      </Alert>
     </div>
-  )
+  );
 };
 
 export default PropExample;
